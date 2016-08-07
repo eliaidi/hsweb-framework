@@ -1,0 +1,60 @@
+{
+  "meta.header": {
+    "name": {
+      "title": "名称",
+      "default": ""
+    },
+    "dataType": {
+      "title": "数据类型",
+      "default": "varchar",
+      "lowerCase": true,
+      "mapper.javaType": {
+        "^varchar.*": "string",
+        "number": "double",
+        "number\\(([1-9]\\d{0,2}+)\\)": "int",
+        "number\\(([1-9]\\d{0,2}+,[1-9]\\d{0,2}+)\\)": "double",
+        "clob": "string",
+        "date": "date",
+        "timestamp\\(([1-9]\\d{0,2}+)\\)": "date",
+        "timestamp": "date"
+      },
+      "注意":"mapper.javaType 代表与字段javaType进行绑定，当javaType字段的值为空时，使用此映射进行匹配(正则表达式)"
+    },
+    "javaType": {
+      "title": "java类",
+      "type": "select",
+      "option_list": [
+        "byte",
+        "short",
+        "char",
+        "boolean",
+        "int",
+        "double",
+        "float",
+        "string",
+        "date"
+      ],
+      "default": "String",
+      "mapperBind": "dataType",
+      "注意":"mapperBind 代表与字段dataType进行绑定，当字段的值为空时，使用dataType字段中的mapper.javaType 来进行匹配(正则表达式)"
+    },
+    "comment": {
+      "title": "备注",
+      "default": "新建字段"
+    },
+    "defaultValue": {
+      "title": "默认值",
+      "default": ""
+    },
+    "primaryKey": {
+      "title": "是否主键",
+      "type": "boolean",
+      "default": "false"
+    },
+    "notNull": {
+      "title": "不能为空",
+      "type": "boolean",
+      "default": "false"
+    }
+  }
+}

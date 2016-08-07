@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- logback 日志的配置文件 -->
+<configuration>
+    <!-- 控制台输出日志 -->
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} > %-5level %logger{35} - %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="JTextArea" class="org.hsweb.generator.swing.logger.JTextAreaLoggerAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss} > %-5level - %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="ON">
+        <appender-ref ref="Console"/>
+        <appender-ref ref="JTextArea"/>
+        <!--
+        <appender-ref ref="DB" />
+        <appender-ref ref="File" />
+         -->
+    </root>
+</configuration>
