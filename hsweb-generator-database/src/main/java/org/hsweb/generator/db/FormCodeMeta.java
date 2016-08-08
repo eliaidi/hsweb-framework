@@ -9,15 +9,9 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by 浩 on 2016-03-21 0021.
- */
 public class FormCodeMeta implements CodeMeta {
-
     private FieldMetaData metaData = new FieldMetaData();
-
     private static final Map<String, Class> typeMapper = new HashMap<>();
-
     static {
         typeMapper.put("string", String.class);
         typeMapper.put("String", String.class);

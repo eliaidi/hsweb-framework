@@ -8,11 +8,9 @@ import java.util.Map;
 
 /**
  * 动态表单模板输入，设置String类型的模板，通过动态表单定义对象作为配置项（参数 table），进行模板生成。
- * Created by 浩 on 2016-03-17 0017.
  */
 public class TableTemplateInput implements TemplateInput {
     private TableMetaData metaData;
-
     private String template;
 
     private Map<String, Object> config = new HashMap<>();

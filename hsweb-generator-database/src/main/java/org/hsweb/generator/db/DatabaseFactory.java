@@ -12,7 +12,6 @@ import java.util.Properties;
 /**
  * 数据库工厂，用于创建进行数据库操作的对象.
  * 目前只支持mysql和oracle数据库
- * Created by 浩 on 2016-03-17 0017.
  */
 public class DatabaseFactory {
 

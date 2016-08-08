@@ -6,6 +6,7 @@ import org.hsweb.expands.request.http.HttpRequest;
 import java.io.IOException;
 
 public interface RequestBuilder {
+
     HttpRequest http(String url);
 
     HttpRequest https(String url);

@@ -7,10 +7,8 @@ import org.hsweb.expands.request.http.simple.SimpleHttpRequest;
 
 import java.io.IOException;
 
-/**
- * Created by zhouhao on 16-6-23.
- */
 public class SimpleRequestBuilder implements RequestBuilder {
+
     @Override
     public HttpRequest http(String url) {
         if (!url.startsWith("http")) url = "http://" + url;
@@ -39,5 +37,4 @@ public class SimpleRequestBuilder implements RequestBuilder {
     public FtpRequest ftp(String host) throws IOException {
         return ftp(host, 22);
     }
-
 }

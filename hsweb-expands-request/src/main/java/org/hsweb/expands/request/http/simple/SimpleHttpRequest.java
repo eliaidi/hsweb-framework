@@ -5,10 +5,8 @@ import org.hsweb.expands.request.http.Response;
 
 import java.io.IOException;
 
-/**
- * Created by zhouhao on 16-6-28.
- */
 public class SimpleHttpRequest extends AbstractHttpRequest {
+
     public SimpleHttpRequest(String url) {
         super(url);
     }

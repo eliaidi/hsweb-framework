@@ -9,7 +9,6 @@ import java.util.Map;
 
 /**
  * 创建表的模板输出，将模板输出为数据库表。在模板输出配置中，需要提供 table参数，类型为{@link TableMetaData}<br>
- * Created by 浩 on 2016-03-17 0017.
  */
 public class TableTemplateOutput implements TemplateOutput {
 

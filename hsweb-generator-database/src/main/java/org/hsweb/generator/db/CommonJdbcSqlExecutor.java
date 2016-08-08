@@ -9,11 +9,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-/**
- * Created by 浩 on 2016-03-17 0017.
- */
 public class CommonJdbcSqlExecutor extends AbstractJdbcSqlExecutor {
-
     private Properties jdbcProperties;
 
     public CommonJdbcSqlExecutor(Properties jdbcProperties) {
@@ -42,11 +38,8 @@ public class CommonJdbcSqlExecutor extends AbstractJdbcSqlExecutor {
     @Override
     public Connection getConnection() {
         try {
-            return DriverManager.getConnection(
-                    jdbcProperties.getProperty("jdbc.url"),
-                    jdbcProperties.getProperty("jdbc.username"),
-                    jdbcProperties.getProperty("jdbc.password")
-            );
+            return DriverManager.getConnection(jdbcProperties.getProperty("jdbc.url"),
+                    jdbcProperties.getProperty("jdbc.username"), jdbcProperties.getProperty("jdbc.password"));
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

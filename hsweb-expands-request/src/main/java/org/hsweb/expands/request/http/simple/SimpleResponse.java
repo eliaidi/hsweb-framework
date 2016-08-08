@@ -8,11 +8,8 @@ import org.hsweb.expands.request.http.Response;
 import java.io.IOException;
 import java.io.InputStream;
 
-/**
- * Created by zhouhao on 16-6-28.
- */
 public class SimpleResponse implements Response {
-    HttpResponse response;
+    private HttpResponse response;
 
     public SimpleResponse(HttpResponse response) {
         this.response = response;
