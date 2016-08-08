@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.Objects;
 
 public class ZIPReader {
-
     private File zipFile;
 
     public ZIPReader(File inputStream) {

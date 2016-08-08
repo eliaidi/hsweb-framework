@@ -12,7 +12,6 @@ import java.util.Map;
 public class TableTemplateInput implements TemplateInput {
     private TableMetaData metaData;
     private String template;
-
     private Map<String, Object> config = new HashMap<>();
 
     public TableTemplateInput(TableMetaData metaData) {
@@ -22,6 +21,12 @@ public class TableTemplateInput implements TemplateInput {
     public TableTemplateInput(TableMetaData metaData, String template) {
         this.metaData = metaData;
         this.template = template;
+    }
+
+    @Override
+    public Map<String, Object> getConfig() {
+        config.put("table", metaData);
+        return config;
     }
 
     public void setTemplate(String template) {
@@ -35,11 +40,5 @@ public class TableTemplateInput implements TemplateInput {
 
     public void setConfig(Map<String, Object> config) {
         this.config = config;
-    }
-
-    @Override
-    public Map<String, Object> getConfig() {
-        config.put("table", metaData);
-        return config;
     }
 }

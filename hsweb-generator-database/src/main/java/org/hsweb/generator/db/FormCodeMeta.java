@@ -11,7 +11,9 @@ import java.util.Map;
 
 public class FormCodeMeta implements CodeMeta {
     private FieldMetaData metaData = new FieldMetaData();
+
     private static final Map<String, Class> typeMapper = new HashMap<>();
+
     static {
         typeMapper.put("string", String.class);
         typeMapper.put("String", String.class);

@@ -8,9 +8,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.util.List;
 
-/**
- * 压缩解压文件测试
- */
 public class CompressTest {
 
     @org.junit.Test
@@ -23,9 +20,6 @@ public class CompressTest {
 
     @org.junit.Test
     public void testZip() throws Exception {
-        Compress.zip()
-                .addTextFile("test.txt", "test")
-                .addTextFile("/test/test2.txt", "test2")
-                .write(new FileOutputStream("target/test.zip"));
+        Compress.zip().addTextFile("test.txt", "test").addTextFile("/test/test2.txt", "test2").write(new FileOutputStream("target/test.zip"));
     }
 }

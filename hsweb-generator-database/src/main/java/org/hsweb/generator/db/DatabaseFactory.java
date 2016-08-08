@@ -10,8 +10,7 @@ import org.hsweb.ezorm.run.simple.SimpleDatabase;
 import java.util.Properties;
 
 /**
- * 数据库工厂，用于创建进行数据库操作的对象.
- * 目前只支持mysql和oracle数据库
+ * 数据库工厂，用于创建进行数据库操作的对象.目前只支持mysql和oracle数据库.
  */
 public class DatabaseFactory {
 
@@ -19,41 +18,25 @@ public class DatabaseFactory {
     }
 
     /**
-     * 根据配置创建一个mysql数据库操作对象=
+     * 根据配置创建一个mysql数据库操作对象
      *
-     * @param jdbcProperties JDBC配置文件<br/>
-     *                       配置文件应包含以下配置:
-     *                       <ul>
-     *                       <li>jdbc.driver.class</li>
-     *                       <li>jdbc.url</li>
-     *                       <li>jdbc.username</li>
-     *                       <li>jdbc.password</li>
-     *                       </ul>
+     * @param jdbcProperties JDBC配置文件
      * @return mysql数据库操作对象
      */
     public static Database createMysqlDatabase(Properties jdbcProperties) {
         DatabaseMetaData metaData = new MysqlDatabaseMeta();
-        Database dataBase = new SimpleDatabase(metaData, new CommonJdbcSqlExecutor(jdbcProperties));
-        return dataBase;
+        return new SimpleDatabase(metaData, new CommonJdbcSqlExecutor(jdbcProperties));
     }
 
     /**
-     * 根据配置创建一个oracle数据库操作对象=
+     * 根据配置创建一个oracle数据库操作对象
      *
-     * @param jdbcProperties JDBC配置文件<br/>
-     *                       配置文件应包含以下配置:
-     *                       <ul>
-     *                       <li>jdbc.driver.class</li>
-     *                       <li>jdbc.url</li>
-     *                       <li>jdbc.username</li>
-     *                       <li>jdbc.password</li>
-     *                       </ul>
+     * @param jdbcProperties JDBC配置文件
      * @return oracle数据库操作对象
      */
     public static Database createOracleDatabase(Properties jdbcProperties) {
         DatabaseMetaData metaData = new OracleDatabaseMeta();
-        Database dataBase = new SimpleDatabase(metaData, new CommonJdbcSqlExecutor(jdbcProperties));
-        return dataBase;
+        return new SimpleDatabase(metaData, new CommonJdbcSqlExecutor(jdbcProperties));
     }
 
     public static Database createDatabase(Properties properties) {

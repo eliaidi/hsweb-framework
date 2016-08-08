@@ -1,9 +1,6 @@
 package org.hsweb.ezorm.param;
 
-/**
- * Created by zhouhao on 16-4-19.
- */
-public class UpdateParam<T,C extends UpdateParam> extends SqlParam<C> {
+public class UpdateParam<T, C extends UpdateParam> extends SqlParam<C> {
     private T data;
 
     public UpdateParam() {
@@ -15,7 +12,7 @@ public class UpdateParam<T,C extends UpdateParam> extends SqlParam<C> {
 
     public C set(T data) {
         this.data = data;
-        return (C)this;
+        return (C) this;
     }
 
     public T getData() {

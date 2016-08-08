@@ -5,9 +5,6 @@ import com.alibaba.fastjson.JSON;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by zhouhao on 16-4-19.
- */
 public class SqlParam<R extends SqlParam> extends org.hsweb.ezorm.param.SqlParam<R> {
 
     protected Map<String, Object> params = new HashMap<>();
