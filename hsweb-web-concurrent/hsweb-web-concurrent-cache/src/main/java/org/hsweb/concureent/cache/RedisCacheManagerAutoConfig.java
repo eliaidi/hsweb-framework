@@ -16,10 +16,6 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.serializer.JdkSerializationRedisSerializer;
 import redis.clients.jedis.Jedis;
 
-
-/**
- * Created by zhouhao on 16-4-26.
- */
 @EnableCaching
 @Configuration
 @ConditionalOnClass({JedisConnection.class, RedisOperations.class, Jedis.class})

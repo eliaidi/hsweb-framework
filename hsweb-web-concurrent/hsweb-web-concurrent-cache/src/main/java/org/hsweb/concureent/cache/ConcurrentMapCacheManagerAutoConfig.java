@@ -18,6 +18,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @Configuration
 @ConditionalOnMissingClass(value = {"org.springframework.data.redis.connection.jedis.JedisConnection"})
 public class ConcurrentMapCacheManagerAutoConfig extends CachingConfigurerSupport {
+
     @Bean
     public KeyGenerator keyGenerator() {
         return (target, method, params) -> {

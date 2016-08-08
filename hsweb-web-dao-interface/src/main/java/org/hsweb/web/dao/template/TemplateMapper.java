@@ -30,5 +30,4 @@ public interface TemplateMapper extends GenericMapper<Template, String> {
      * @return 模板数量
      */
     int countLatestList(QueryParam param);
-
 }
