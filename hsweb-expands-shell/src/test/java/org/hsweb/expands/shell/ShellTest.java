@@ -20,22 +20,16 @@ public class ShellTest {
 
     @Test
     public void testLs() throws Exception {
-        Shell.build("ls")
-                .onProcess((line, helper) -> System.out.println(line))
-                .exec();
+        Shell.build("ls").onProcess((line, helper) -> System.out.println(line)).exec();
     }
 
     @Test
     public void testShellFile() throws Exception {
-        Shell.build("bash", FileUtils.getResourceAsFile("test.sh").getAbsolutePath())
-                .onProcess((line, helper) -> System.out.println(line))
-                .exec();
+        Shell.build("bash", FileUtils.getResourceAsFile("test.sh").getAbsolutePath()).onProcess((line, helper) -> System.out.println(line)).exec();
     }
 
     @Test
     public void testText() throws Exception {
-        Shell.buildText("echo helloShell \n ls").dir("/")
-                .onProcess((line, helper) -> System.out.println(line))
-                .exec();
+        Shell.buildText("echo helloShell \n ls").dir("/").onProcess((line, helper) -> System.out.println(line)).exec();
     }
 }
