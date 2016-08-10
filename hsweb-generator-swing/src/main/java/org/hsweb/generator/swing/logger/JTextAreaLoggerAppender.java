@@ -4,11 +4,7 @@ import org.hsweb.generator.logger.AbstractLoggerAppender;
 
 import javax.swing.*;
 
-/**
- * Created by 浩 on 2016-03-18 0018.
- */
 public class JTextAreaLoggerAppender<E> extends AbstractLoggerAppender<E> {
-
     private static JTextArea textArea;
 
     @Override

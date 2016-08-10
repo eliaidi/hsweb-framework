@@ -41,13 +41,14 @@ import java.util.Map;
 @AccessLogger("工作流-模型管理")
 @Authorize(module = "workflow-model-manager")
 public class ActivityModelController extends BasicController {
-    @Autowired
-    private RepositoryService repositoryService;
     static String MODEL_ID = "modelId";
     static String MODEL_NAME = "name";
     static String MODEL_REVISION = "revision";
     static String MODEL_DESCRIPTION = "description";
     static String MODEL_KEY = "key";
+
+    @Autowired
+    private RepositoryService repositoryService;
 
     @RequestMapping(value = "/model", method = RequestMethod.GET)
     @Authorize(action = "R")
