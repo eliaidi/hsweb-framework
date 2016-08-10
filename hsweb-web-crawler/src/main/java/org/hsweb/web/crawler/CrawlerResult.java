@@ -1,6 +1,5 @@
 package org.hsweb.web.crawler;
 
-
 import java.util.Date;
 
 public class CrawlerResult {

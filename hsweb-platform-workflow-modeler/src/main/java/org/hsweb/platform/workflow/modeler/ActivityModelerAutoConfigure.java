@@ -33,9 +33,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
-/**
- * Created by zhouhao on 16-4-30.
- */
 @Configuration
 @ComponentScan(basePackages = {"org.hsweb.web.workflow"})
 public class ActivityModelerAutoConfigure {
@@ -45,7 +42,7 @@ public class ActivityModelerAutoConfigure {
 
     @PostConstruct
     protected void initModelData() throws Exception {
-       // createModelData("测试流程模型", "This is a demo model", "test.model.json");
+        // createModelData("测试流程模型", "This is a demo model", "test.model.json");
     }
 
     @Bean

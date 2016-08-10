@@ -9,8 +9,6 @@ import java.io.OutputStream;
  * 基于freemarker的动态输出。输出路径可设置变量。
  */
 public class FreemarkerTemplateDynamicOutput extends FreemarkerTemplateOutput {
-
-
     private String output;
 
     public FreemarkerTemplateDynamicOutput(String output) {

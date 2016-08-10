@@ -2,9 +2,6 @@ package org.hsweb.web.bean.po.logger;
 
 import org.hsweb.web.bean.po.GenericPo;
 
-/**
- * Created by 浩 on 2015-09-11 0011.
- */
 public class LoggerInfo extends GenericPo<String> {
     private static final long serialVersionUID = 8910856253780046561L;
     /**
