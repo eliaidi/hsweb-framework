@@ -3,9 +3,6 @@ package org.hsweb.web.bean.common;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by zhouhao on 16-4-21.
- */
 public class UpdateMapParam extends UpdateParam<Map<String, Object>> {
     public UpdateMapParam() {
         this(new HashMap<>());

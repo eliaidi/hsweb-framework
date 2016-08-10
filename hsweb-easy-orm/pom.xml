@@ -121,6 +121,7 @@
             </snapshots>
         </repository>
     </repositories>
+
     <distributionManagement>
         <repository>
             <id>releases</id>

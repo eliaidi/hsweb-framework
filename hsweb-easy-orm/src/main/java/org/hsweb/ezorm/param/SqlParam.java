@@ -4,10 +4,7 @@ package org.hsweb.ezorm.param;
 import java.util.*;
 import java.util.stream.Collectors;
 
-/**
- * Created by zhouhao on 16-4-19.
- */
-public class SqlParam<R extends SqlParam> implements Cloneable{
+public class SqlParam<R extends SqlParam> implements Cloneable {
 
     /**
      * 条件
@@ -112,8 +109,8 @@ public class SqlParam<R extends SqlParam> implements Cloneable{
     }
 
     @Override
-    public SqlParam<R> clone()  {
-        SqlParam<R> sqlParam=new SqlParam<>();
+    public SqlParam<R> clone() {
+        SqlParam<R> sqlParam = new SqlParam<>();
         sqlParam.setExcludes(new LinkedHashSet<>(excludes));
         sqlParam.setIncludes(new LinkedHashSet<>(includes));
         List<Term> terms = this.terms.stream().map(term -> term.clone()).collect(Collectors.toList());

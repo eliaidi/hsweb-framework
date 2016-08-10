@@ -20,7 +20,7 @@ public class TableTemplateOutput implements TemplateOutput {
 
     @Override
     public void output() {
-        //生成数据库表
+        // 生成数据库表
         Map<String, Object> config = template.getInput().getConfig();
         if (config != null) {
             TableMetaData metaData = (TableMetaData) config.get("table");
